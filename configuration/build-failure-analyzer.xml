@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.sonyericsson.jenkins.plugins.bfa.PluginImpl plugin="build-failure-analyzer@1.19.0">
+  <noCausesMessage>No problems were identified. If you know why this problem occurred, please add a suitable Cause for it.</noCausesMessage>
+  <globalEnabled>true</globalEnabled>
+  <doNotAnalyzeAbortedJob>false</doNotAnalyzeAbortedJob>
+  <gerritTriggerEnabled>true</gerritTriggerEnabled>
+  <knowledgeBase class="com.sonyericsson.jenkins.plugins.bfa.db.LocalFileKnowledgeBase">
+    <causes>
+      <entry>
+        <string>6a0ee661-11c8-45cf-8741-a9c30c20281a</string>
+        <com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+          <id>6a0ee661-11c8-45cf-8741-a9c30c20281a</id>
+          <name>fe-test-fails</name>
+          <description>${1,1} Tests Failed out of ${1,2}</description>
+          <comment></comment>
+          <indications>
+            <com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+              <pattern>.*TOTAL: (\d+) FAILED, (\d+) SUCCESS.*</pattern>
+            </com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+          </indications>
+          <modifications class="linked-list">
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>generated-by-s2i</user>
+              <time>2017-11-28 10:15:11.116 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+          </modifications>
+        </com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+      </entry>
+      <entry>
+        <string>b668deec-e100-4521-9e6a-eec41cd5ec83</string>
+        <com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+          <id>b668deec-e100-4521-9e6a-eec41cd5ec83</id>
+          <name>server-not-reached-to-build</name>
+          <description>Error from server (BadRequest): cannot upload file to build</description>
+          <comment></comment>
+          <indications>
+            <com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+              <pattern>.*Error\ from\ server\ \(BadRequest\)\:\ cannot\ upload\ file\ to\ build.*</pattern>
+            </com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+          </indications>
+          <modifications class="linked-list">
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>generated-by-s2i</user>
+              <time>2017-11-22 15:12:30.361 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>generated-by-s2i</user>
+              <time>2017-11-22 15:10:31.917 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>generated-by-s2i</user>
+              <time>2017-11-22 15:10:02.513 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>generated-by-s2i</user>
+              <time>2017-11-22 15:09:25.101 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+          </modifications>
+        </com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+      </entry>
+      <entry>
+        <string>02ca6572-c5d1-408a-b867-17c8faee9d4c</string>
+        <com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+          <id>02ca6572-c5d1-408a-b867-17c8faee9d4c</id>
+          <name>code-coverage-too-low</name>
+          <description>The code coverage is too low. The build was marked as UNSTABLE</description>
+          <comment></comment>
+          <indications>
+            <com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+              <pattern>.*Build step &apos;Publish Cobertura Coverage Report&apos; changed build result to UNSTABLE.*</pattern>
+            </com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+          </indications>
+          <modifications class="linked-list">
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>generated-by-s2i</user>
+              <time>2017-11-28 14:47:53.482 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>generated-by-s2i</user>
+              <time>2017-11-28 14:44:17.352 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+          </modifications>
+        </com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+      </entry>
+      <entry>
+        <string>cba84bf4-f593-4867-926f-e8964b58cdd7</string>
+        <com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+          <id>cba84bf4-f593-4867-926f-e8964b58cdd7</id>
+          <name>selenium-not-started</name>
+          <description>Is selenium server started?</description>
+          <comment></comment>
+          <indications>
+            <com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+              <pattern>.*Is\ selenium\ server\ started.*</pattern>
+            </com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+          </indications>
+          <modifications class="linked-list">
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>generated-by-s2i</user>
+              <time>2017-11-06 18:41:45.173 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+          </modifications>
+        </com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+      </entry>
+    </causes>
+  </knowledgeBase>
+  <nrOfScanThreads>3</nrOfScanThreads>
+  <maxLogSize>0</maxLogSize>
+  <graphsEnabled>false</graphsEnabled>
+  <testResultParsingEnabled>false</testResultParsingEnabled>
+  <testResultCategories></testResultCategories>
+  <sodVariables>
+    <minimumSodWorkerThreads>1</minimumSodWorkerThreads>
+    <maximumSodWorkerThreads>1</maximumSodWorkerThreads>
+    <sodThreadKeepAliveTime>15</sodThreadKeepAliveTime>
+    <sodWaitForJobShutdownTimeout>30</sodWaitForJobShutdownTimeout>
+    <sodCorePoolNumberOfThreads>5</sodCorePoolNumberOfThreads>
+  </sodVariables>
+</com.sonyericsson.jenkins.plugins.bfa.PluginImpl>
