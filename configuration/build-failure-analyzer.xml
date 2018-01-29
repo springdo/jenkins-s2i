@@ -27,6 +27,138 @@
         </com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
       </entry>
       <entry>
+        <string>faf361ee-70f0-4914-b9ad-2357afa2b4a0</string>
+        <com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+          <id>faf361ee-70f0-4914-b9ad-2357afa2b4a0</id>
+          <name>missing-dependencies</name>
+          <description>Cannot find :: ${1,1}</description>
+          <comment></comment>
+          <indications>
+            <com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+              <pattern>.*missing dependency (.*)</pattern>
+            </com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+          </indications>
+          <modifications class="linked-list">
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>donal-admin</user>
+              <time>2017-12-20 12:30:50.354 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+          </modifications>
+        </com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+      </entry>
+      <entry>
+        <string>96fa5f54-bede-400e-81d1-ed688244735e</string>
+        <com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+          <id>96fa5f54-bede-400e-81d1-ed688244735e</id>
+          <name>504-gateway-timeout</name>
+          <description>504 Gateway Time-out</description>
+          <comment></comment>
+          <indications>
+            <com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+              <pattern>.*The requested URL returned error: 504 Gateway Time-out.*</pattern>
+            </com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+          </indications>
+          <modifications class="linked-list">
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>tpage-admin</user>
+              <time>2018-01-09 07:49:44.190 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+          </modifications>
+        </com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+      </entry>
+      <entry>
+        <string>59e2c10d-dc62-4c0b-8c80-3501d36f681e</string>
+        <com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+          <id>59e2c10d-dc62-4c0b-8c80-3501d36f681e</id>
+          <name>tests-failed</name>
+          <description>${1,2} Tests Failed out of ${1,1}</description>
+          <comment></comment>
+          <indications>
+            <com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+              <pattern>(\d+) tests completed, (\d+) failed</pattern>
+            </com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+          </indications>
+          <modifications class="linked-list">
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>tpage-admin</user>
+              <time>2018-01-04 07:32:45.6 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>tpage-admin</user>
+              <time>2018-01-04 07:31:11.881 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>tpage-admin</user>
+              <time>2018-01-04 07:26:53.919 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>tpage-admin</user>
+              <time>2018-01-04 07:24:58.420 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>tpage-admin</user>
+              <time>2018-01-04 07:23:26.170 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>tpage-admin</user>
+              <time>2018-01-04 07:23:14.951 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>tpage-admin</user>
+              <time>2018-01-04 07:20:55.35 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>tpage-admin</user>
+              <time>2018-01-04 07:16:43.962 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+          </modifications>
+        </com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+      </entry>
+      <entry>
+        <string>1600a968-22a8-42ed-843c-847dd0479d24</string>
+        <com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+          <id>1600a968-22a8-42ed-843c-847dd0479d24</id>
+          <name>500-internal-server-error</name>
+          <description>500 Internal Server Error</description>
+          <comment></comment>
+          <indications>
+            <com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+              <pattern>.*500 Internal Server Error.*</pattern>
+            </com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+          </indications>
+          <modifications class="linked-list">
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>donal-admin</user>
+              <time>2018-01-05 23:49:59.110 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+          </modifications>
+        </com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+      </entry>
+      <entry>
+        <string>bf0a4900-fb07-4e90-97da-f219d0d2d9cb</string>
+        <com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+          <id>bf0a4900-fb07-4e90-97da-f219d0d2d9cb</id>
+          <name>404-not-found</name>
+          <description>404 Not Found</description>
+          <comment></comment>
+          <indications>
+            <com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+              <pattern>.*404 Not Found.*</pattern>
+            </com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+          </indications>
+          <modifications class="linked-list">
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>donal-admin</user>
+              <time>2018-01-05 23:39:05.104 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>donal-admin</user>
+              <time>2018-01-04 14:03:28.766 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+          </modifications>
+        </com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+      </entry>
+      <entry>
         <string>b668deec-e100-4521-9e6a-eec41cd5ec83</string>
         <com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
           <id>b668deec-e100-4521-9e6a-eec41cd5ec83</id>
@@ -83,6 +215,34 @@
         </com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
       </entry>
       <entry>
+        <string>c56d101e-b44e-4e51-a94e-9effe5a53b9c</string>
+        <com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+          <id>c56d101e-b44e-4e51-a94e-9effe5a53b9c</id>
+          <name>unauthorized-access</name>
+          <description>Cannot run test(s) due to unauthorised access</description>
+          <comment></comment>
+          <indications>
+            <com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+              <pattern>.*Testing (.*) 401.*</pattern>
+            </com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+          </indications>
+          <modifications class="linked-list">
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>tpage-admin</user>
+              <time>2018-01-04 14:15:40.808 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>tpage-admin</user>
+              <time>2018-01-04 14:12:09.597 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>tpage-admin</user>
+              <time>2018-01-04 14:10:06.428 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+          </modifications>
+        </com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+      </entry>
+      <entry>
         <string>cba84bf4-f593-4867-926f-e8964b58cdd7</string>
         <com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
           <id>cba84bf4-f593-4867-926f-e8964b58cdd7</id>
@@ -98,6 +258,26 @@
             <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
               <user>generated-by-s2i</user>
               <time>2017-11-06 18:41:45.173 UTC</time>
+            </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+          </modifications>
+        </com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+      </entry>
+      <entry>
+        <string>5bf76eee-7d19-4ad6-9bbf-0bb3afa2ef94</string>
+        <com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
+          <id>5bf76eee-7d19-4ad6-9bbf-0bb3afa2ef94</id>
+          <name>gitlabs-connection-issue</name>
+          <description>Could not connect to GitLabs</description>
+          <comment></comment>
+          <indications>
+            <com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+              <pattern>.*ERROR: Error cloning remote repo.*</pattern>
+            </com.sonyericsson.jenkins.plugins.bfa.model.indication.BuildLogIndication>
+          </indications>
+          <modifications class="linked-list">
+            <com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
+              <user>tpage-admin</user>
+              <time>2017-12-20 07:19:08.649 UTC</time>
             </com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseModification>
           </modifications>
         </com.sonyericsson.jenkins.plugins.bfa.model.FailureCause>
