@@ -149,16 +149,15 @@ pipelineNames.each {
             // nexus upload
             postBuildScripts {
                 steps {
-                    shell('export WAR_NAME=$(ls api/build/libs/)' + newLine +
-                        'curl -v -F r=releases \\' + newLine +
+                    shell('curl -v -F r=releases \\' + newLine +
                                 '-F hasPom=false \\' + newLine +
                                 '-F e=zip \\' + newLine +
                                 '-F g=com.example.react \\' + newLine +
                                 '-F a=cc-fe \\' + newLine +
                                 '-F v=0.0.1-${JOB_NAME}.${BUILD_NUMBER} \\' + newLine +
                                 '-F p=zip \\' + newLine +
-                                '-F file=@cc-fe.zip\\' + newLine +
-                                '-u admin:admin123 http://nexus-v2.cc-ci-cd.svc:8081/nexus/service/local/artifact/maven/content')
+                                '-F file=@cc-fe.zip \\' + newLine +
+                                '-u admin:admin123 http://nexus-v2.cc-ci-cd.svc.cluster.local:8081/nexus/service/local/artifact/maven/content')
                 }
             }
 
@@ -232,10 +231,11 @@ pipelineNames.each {
                 shell('#!/bin/bash' + newLine +
                         'set -o xtrace' + newLine +
                         '# WIPE PREVIOUS BINARY' + newLine +
-                        'rm -rf *.zip' + newLine +
+                        'rm -rf *.zip package-contents' + newLine +
                         '# GET BINARY - DIRTY GET BINARY HACK' + newLine +
-                        'curl -v -f http://admin:admin123@nexus-v2.cc-ci-cd.svc:8081/nexus/service/local/repositories/releases/content/com/example/react/cc-fe/0.0.1-${BUILD_TAG}/cc-fe-0.0.1-${BUILD_TAG}.zip -o cc-fe.zip' + newLine +
-                        'unzip cc-fe.zip -d cc-fe' + newLine +
+                        'curl -v -f http://admin:admin123@nexus-v2.cc-ci-cd.svc.cluster.local:8081/nexus/service/local/repositories/releases/content/com/example/react/cc-fe/0.0.1-${BUILD_TAG}/cc-fe-0.0.1-${BUILD_TAG}.zip -o cc-fe.zip' + newLine +
+                        'unzip cc-fe.zip' + newLine +
+                        'oc project cc-ci-cd'  + newLine +
                         '# DO OC BUILD STUFF WITH BINARY NOW' + newLine +
                         'NAME=' + appName  + newLine +
                         'oc patch bc ${NAME} -p "spec:' + newLine +
@@ -244,7 +244,7 @@ pipelineNames.each {
                         '     to:' + newLine +
                         '       kind: ImageStreamTag' + newLine +
                         '       name: \'${NAME}:${JOB_NAME}.${BUILD_NUMBER}\'"' + newLine +
-                        'oc start-build ${NAME} --from-dir=cc-fe/ --follow')
+                        'oc start-build ${NAME} --from-dir=package-contents/ --follow')
             }
         }
         publishers {
@@ -325,8 +325,7 @@ buildMonitorView('cc-fe-monitor') {
     jobs {
         regex(".*cc.*")
     }
-}
-</scriptText>
+}      </scriptText>
       <usingScriptText>true</usingScriptText>
       <sandbox>false</sandbox>
       <ignoreExisting>false</ignoreExisting>
