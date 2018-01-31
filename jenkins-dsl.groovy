@@ -293,6 +293,15 @@ pipelineNames.each {
             notifySlack(delegate)
         }
     }
+    buildPipelineView(pipelineName + "-pipeline") {
+        filterBuildQueue()
+        filterExecutors()
+        title(pipelineName + " CI Pipeline")
+        displayedBuilds(10)
+        selectedJob(buildImageName)
+        alwaysAllowManualTrigger()
+        refreshFrequency(5)
+    }
 }
 
 buildMonitorView('cc-fe-monitor') {
