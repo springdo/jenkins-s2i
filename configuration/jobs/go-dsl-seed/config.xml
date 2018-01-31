@@ -120,7 +120,7 @@
                                 'go build' + newLine +
                                 'go test' + newLine +
                                 'mkdir package-contents' + newLine +
-                                'mv * package-contents' + newLine +
+                                'mv Dockerfile dev-cc-go-build package-contents' + newLine +
                                 'zip -r cc-go.zip package-contents')
                     }
                 }
