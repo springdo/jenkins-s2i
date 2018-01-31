@@ -168,12 +168,12 @@ pipelineNames.each {
             }
             // git publisher
             //TODO add this back in
-            // git {
-            //     tag("origin", "\${JOB_NAME}.\${BUILD_NUMBER}") {
-            //         create(true)
-            //         message("Automated commit by jenkins from \${JOB_NAME}.\${BUILD_NUMBER}")
-            //     }
-            // }
+            git {
+                tag("origin", "\${JOB_NAME}.\${BUILD_NUMBER}") {
+                    create(true)
+                    message("Automated commit by jenkins from \${JOB_NAME}.\${BUILD_NUMBER}")
+                }
+            }
 
             downstreamParameterized {
                 trigger(bakeImageName) {
@@ -386,12 +386,12 @@ pipelineNames.each {
 
             // git publisher
             //TODO Add this back in
-            // git {
-            //     tag("origin", "\${JOB_NAME}.\${BUILD_NUMBER}") {
-            //         create(true)
-            //         message("Automated commit by jenkins from \${JOB_NAME}.\${BUILD_NUMBER}")
-            //     }
-            // }
+            git {
+                tag("origin", "\${JOB_NAME}.\${BUILD_NUMBER}") {
+                    create(true)
+                    message("Automated commit by jenkins from \${JOB_NAME}.\${BUILD_NUMBER}")
+                }
+            }
 
             downstreamParameterized {
                 trigger(bakeImageName) {
