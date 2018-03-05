@@ -18,4 +18,6 @@ usernameAndPassword = new UsernamePasswordCredentialsImpl(
   gitUsername,
   gitPassword
 )
+
 store.addCredentials(domain, usernameAndPassword)
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")
